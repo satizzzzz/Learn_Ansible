@@ -1,0 +1,63 @@
+WHAT IS ANSIBLE?
+
+Wikipedia Definition: Open source, configuration management, app deployment tool enables infra as a code. Runs in both Linux/unix like systems and windows.
+
+Simple Definition: Open source free automation tool which automates IT tasks on local and remote systems.
+
+Ansible Controller(one) -> Remote Node(Multiple)
+
+Written in Python.
+
+USED TO:
+	Provision System
+		Bare-metal servers, VM, DB systems, Cloud
+	Deploy Apps
+	Configure System
+		Updates/upgrades, Package installations, Service configs, start/stop/restart services
+	Manage system and apps
+	Orchestration
+
+Open source and Community Driven
+Ansible -> Redhat
+Available for most Linux distros and cannot be installed in windows
+
+BENEFITS:
+	Agentless, that is no agent to be installed in all servers
+	Open source
+	No human errors
+	Saves time and increase productivity
+	Easy to use and Simple
+	Secure since it uses SSH
+	Pre-written modules
+
+TERMINOLOGIES:
+	Ansible Server/Controller(Only in Linux)
+	Modules - 1300 are available docs.ansible.com
+	Tasks - consists multiple modules
+	Playbook - step by step execution of multiple tasks with multiple modules
+	YAML - playbook format
+	Inventory - Information about remote client details
+	Tag - reference to tasks
+	Variable - that store some values
+	Roles -Groups the content and reuse.  Splitting the playbook into smaller groups
+
+HOW ANSIBLE WORKS?
+
+Task consists of Modules
+Multiple modules called Play
+Plays in PLaybook
+Playbook written in YAML
+
+COMMANDS:
+
+ansible-playbook example.yml
+
+ansible hosts -m ping
+
+ansible cfg - /etc/ansible/ansible.cfg
+hosts file - /etc/ansible/hosts
+roles - /etc/ansible/roles
+
+Puppets and Chefs are other automation tools
+
+	
