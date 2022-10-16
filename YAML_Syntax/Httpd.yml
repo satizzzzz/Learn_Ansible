@@ -1,0 +1,14 @@
+---
+- name: Installing and Running Httpd
+  hosts: localhost
+
+  tasks:
+  - name: Installing httpd
+    yum:
+     name: httpd
+     state: present
+
+  - name: Starting HTTPD service
+    service:
+     name: httpd
+     state: started

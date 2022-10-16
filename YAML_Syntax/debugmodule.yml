@@ -1,0 +1,9 @@
+#Using debug module to print the output
+---
+- name: "Debug Module"
+  hosts: localhost
+
+  tasks:
+  - name: "HelloWorld Print"
+    debug:
+        msg="Hello World"

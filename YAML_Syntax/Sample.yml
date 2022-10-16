@@ -1,0 +1,18 @@
+---
+   - name: Playbook name
+     hosts: specify the host file here
+     become: yes
+     become_user: root
+
+     tasks:
+     - name: Installing httpd apache
+       yum: 
+       name: httpd
+       state: present
+       
+     - name: starting service
+       service:
+       name: httpd
+       state: started
+       
+#https://docs.ansible.com/ansible/2.5/modules/ - Ansible Module list

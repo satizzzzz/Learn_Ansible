@@ -1,0 +1,8 @@
+YAML Syntax:
+1. Executed in a sequetial order
+2. One task processed at a time
+3. Indentation is required
+4. No tabs only spaces
+5. Empty lines has no values
+6. .yml/.yaml extension with out yaml extension also it will works
+7. Playbooks can be anywhere but should be used with absolute path
