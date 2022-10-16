@@ -1,0 +1,12 @@
+#Modules used file
+
+---
+- name: Change Permissions
+  hosts: all
+
+  tasks:
+  - name: Change permissions
+    file:
+     state: touch
+     path: /tmp/dummyfile2
+     mode: 770

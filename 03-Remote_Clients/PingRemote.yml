@@ -1,0 +1,6 @@
+- name: Remote connectivity test
+  hosts: all
+
+  tasks:
+  - name: Ping remote client
+    ping:

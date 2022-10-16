@@ -1,0 +1,27 @@
+#Copy files and check if it exists
+
+#Modules Used: Copy, Stat(REtrieves file status), Register(Captures the information in a var), debug, when(conditionals)
+
+---
+- name: Copy files from Source to Remote
+  hosts: all
+
+  tasks:
+  - name: copy files
+    become: true
+    copy:
+       src: /tmp/SourceFileToBeCopied.txt
+       dest: /tmp
+       owner: osboxes
+       group: wheel
+       mode: 655
+
+  - name: check if the file exists
+    stat:
+       path: "/tmp/SourceFileToBeCopied.txt"
+    register: file_data
+
+  - name: Print yes if exists
+    debug:
+       msg: "Yes, exists"
+    when: file_data.stat.exists
