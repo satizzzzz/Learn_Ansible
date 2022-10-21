@@ -1,0 +1,13 @@
+---
+- name: Running a shell script in remote servers
+  hosts: all
+
+  tasks:
+  - name: Copy script file from remote to client
+    copy:
+     src: "/home/osboxes/time.sh"
+     dest: "/home/osboxes/time.sh"
+     mode: 755
+
+  - name: Running shell script
+    shell: "/home/osboxes/time.sh"

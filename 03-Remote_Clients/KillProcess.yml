@@ -1,0 +1,14 @@
+---
+- name: Killing the running processes
+  hosts: all
+
+  tasks:
+   - name: find the TOP process
+     ignore_errors: yes
+     shell: "ps -efw | grep -i top | awk '{print $2}'"
+     register: running_process
+
+   - name: Kill the top process
+     ignore_errors: yes
+     shell: "kill {{ item }}"
+     with_items: "{{ running_process.stdout_lines  }}"

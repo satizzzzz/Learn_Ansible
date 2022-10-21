@@ -3,3 +3,5 @@ Defining the remotes hostname in ansible hosts/inventory file
 Make sure it has the ssh connectivity, if not establish ssh-keygen and ssh-copy-id
 Try running ping module with ansible adhoc command
 
+ansible-playbook KillProcess.yml --start-at-task 'Kill the top process'
+ansible-playbook KillProcess.yml --extra-vars variable=value

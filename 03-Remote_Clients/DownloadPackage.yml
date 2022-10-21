@@ -1,0 +1,20 @@
+---
+- name: Downloading a package
+  hosts: all
+
+  tasks:
+  - name: Create a directory
+    file:
+     path: /opt/tomcat
+     state: directory
+     mode: 0755
+     owner: root
+     group: root
+
+  - name: Download from URL
+    get_url:
+     url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
+     dest: /opt/tomcat
+     mode: 0755
+     owner: osboxes
+     group: osboxes

@@ -1,0 +1,14 @@
+---
+- name: Creating a user in remote
+  hosts: all
+
+  tasks:
+  - name: Create Satz user
+    user:
+     name: Satz
+     home: /home/Satz
+     shell: /bin/bash
+     update_password: always
+     password: "{{ newpassword|password_hash('sha512') }}"
+     
+#while running password value should be passed as argument ansible-playbook AddUser.yml --extra-vars newpassword=satz123

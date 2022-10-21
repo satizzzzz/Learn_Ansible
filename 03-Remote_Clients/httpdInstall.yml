@@ -1,0 +1,37 @@
+#Installing and running HTTPD service using playbook
+#Pre-Checks
+#rpm -qa | grep httpd - to check if it is already installed
+#systemctl status firewalld
+#ansible-galaxy collection install ansible-posix
+#post-checks
+#rpm -qa | grep httpd
+#systemctl status firewalld/httpd
+#firewall-cmd --list-all
+
+
+---
+- name: Installing and running the HTTPD service
+  hosts: all
+
+  tasks:
+  - name: Install HTTPD
+    yum:
+      name: httpd
+      state: present
+
+
+  - name: Starting HTTPD
+    service:
+      name: httpd
+      state: started
+
+  - name: Open port 80
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+
+  - name: Restart firewalld for reload changes
+    service:
+      name: firewalld
+      state: reloaded
