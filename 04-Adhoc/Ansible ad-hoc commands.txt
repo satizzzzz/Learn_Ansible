@@ -1,0 +1,11 @@
+#Ansible Ad-hoc commands
+
+1. ansible localhost -m ping
+2. ansible all -m file -a "path=/home/Satz/adhocfile state=touch owner=Satz group=Satz mode=755"
+3. ansible all -m file -a "path=/home/Satz/adhocfile state=absent"
+4. ansible all -m copy -a "src=/tmp/testadhoc dest=/tmp/testadhoc"
+5. ansible all -m yum -a "name=telnet state=present"
+6. ansible all -m service -a "name=httpd state=stopped"
+7. ansible all -m service -a "name=httpd state=started enabled=yes"
+8. ansible all -m shell -a "systemctl status httpd"
+9. ansible all -m user -a "name=kumar shell=/bin/bash home=/home/kumar state=present"
