@@ -1,0 +1,21 @@
+ANSIBLE AWX(ANSIBLE WORKX)
+
+Web app, UI, API and task engine
+Manages  playbooks, inventories, run reports and schedule jobs
+Community driven management tool
+
+Pros:
+Full features of ANSIBLE Tower
+Free download
+No limited number of nodes
+Great for lower envs
+
+Cons:
+No support by Redhat
+
+
+Ansible AWS installed from docker containers
+
+ANSIBLE TOWER:
+
+COMMERCIAL ANSIBLE MANAGEMENT PRODUCT
