@@ -1,0 +1,19 @@
+---
+- name: Installing apache webserver by conditions
+  hosts: all
+
+  tasks:
+   - name: Install in Ubuntu
+     apt:
+       name: apache2
+       state: present
+     when: ansible_os_family == "Debian"
+
+   - name: Install in Centos
+     yum:
+       name: httpd
+       state: present
+     when: ansible_os_family == "RedHat"
+     
+     
+#ansible localhost -m setup - Adhoc command to retrieve the facts

@@ -1,0 +1,13 @@
+---
+- name: Deleting users by variable
+  hosts: all
+  vars:
+   users: [Sam,Kumar,Devi]
+
+  tasks:
+  - name: Deleting users
+    user:
+     name: '{{item}}'
+#    name: '{{items}}' - with_items is not needed
+     state: absent
+    with_items: '{{users}}'

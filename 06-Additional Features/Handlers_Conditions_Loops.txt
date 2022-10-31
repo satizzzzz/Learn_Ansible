@@ -1,0 +1,21 @@
+HANDLERS
+They are notified at the end of the tasks. Typically used to start,stop,restart,reload services
+
+For example, restarting the HTTPD services, whenever the chanages happened to the HTTPD conf files
+
+NOTIFY should be used at the task level
+
+CONDITIONS
+
+Allows ansible to take actions based on conditions
+
+WHEN can be used and defined inside tasks
+
+
+LOOPS
+
+Used for the repetative tasks.
+
+LOOP
+
+Can be done with 2 methods, with variable and parameter.
