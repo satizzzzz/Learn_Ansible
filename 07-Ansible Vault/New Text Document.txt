@@ -1,0 +1,13 @@
+Ansible Vault -  Built in feature for security purpose
+Password protected a yml file
+
+ansible-vault create <yml file>
+Password should be given in the prompt
+confirm password
+
+Original content cannot be viewed under vault created yaml file
+
+To run a vaulted file,
+
+ansible-playbook <yml file> --ask-vault-pass
+

@@ -1,0 +1,25 @@
+Ansible roles - Group tasks which can be used as templates to avoid redundancy in playbooks
+It can be segregated as servers/tasks/applications etc
+
+Dir should be created /etc/ansible/roles/webservers/tasks/main.yml file
+
+---
+- name: Roles for creating a web user
+  user:
+   name: web
+   home: /home/web
+   group: wheel
+   state: present
+
+In playbooks, it can be 
+---
+- name: User creation Role
+  hosts: all
+  roles:
+  - webservers
+  
+Ansible Galaxy consists of predefined ansible roles which can be downloaded and used
+
+tags is the short name given for a tasks
+
+variables can be global/local can be used anywhere inside the playbooks

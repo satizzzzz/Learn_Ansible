@@ -1,0 +1,21 @@
+ANSIBLE VAULT -  BUILT IN FEATURE FOR SECURITY PURPOSE
+Password protected a yml file
+
+
+Password should be given in the prompt
+confirm password
+
+Original content cannot be viewed under vault created yaml file
+
+ansible-vault create <yml file> - To create vaulted file
+ansible-playbook <yml file> --ask-vault-pass - To run a vaulted file
+ansible-vault view <yaml file> - To view vaulted file
+ansible-vault edit <yaml file> - To edit 
+ansible-vault --help
+ansible-vault encrypt <existing yml file>
+
+Encrypting a string in playbook.
+
+ansible-vault encrypt_string <string>
+
+encrypter value will be the output of the string and it can be used in the playbook

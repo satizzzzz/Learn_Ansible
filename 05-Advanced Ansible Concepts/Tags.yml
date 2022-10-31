@@ -1,0 +1,19 @@
+---
+- name: Tags example
+  hosts: all
+
+  tasks:
+  - name: stopping httpd service
+    service:
+     name: httpd
+     state: stopped
+    tags: s-httpd
+
+  - name: starting httpd service
+    service:
+     name: httpd
+     state: started
+    tags: st-httpd
+    
+ #ansible-playbook tags.yml --list-tags
+ #ansible-playbook tags.yml -t stat-httpd

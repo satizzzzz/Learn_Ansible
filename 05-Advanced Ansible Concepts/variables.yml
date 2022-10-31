@@ -1,0 +1,11 @@
+---
+- name: Variable example
+  hosts: all
+  vars:
+   packg: httpd
+
+  tasks:
+   - name: Service start
+     service:
+      name: "{{ packg }}"
+      state: started
